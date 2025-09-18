@@ -1,0 +1,23 @@
+{
+  "name": "Python 3.10 Codespace for EchoBot",
+  "image": "mcr.microsoft.com/devcontainers/python:0-3.10-bullseye",
+
+  "features": {
+    "ghcr.io/devcontainers/features/nvidia-cuda:1": {
+      "installCudnn": true
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ms-python.python"
+      ]
+    }
+  },
+
+  "postCreateCommand": "echo 'Codespace is ready. Please run: python -m venv venv && source venv/bin/activate && pip install --upgrade pip'"
+}
